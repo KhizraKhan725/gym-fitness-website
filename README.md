@@ -1,2 +1,19 @@
-# gym-fitness-website
-A responsive gym and fitness website built using HTML, CSS, and JavaScript. Features modern UI design, workout sections, membership plans, trainer profiles, and contact information.
+# Gym Fitness Website
+
+A modern and responsive gym fitness website designed using HTML, CSS, and JavaScript.
+
+## Features
+- Responsive Design
+- Modern Landing Page
+- Membership Plans Section
+- Trainer Profiles
+- Contact Form
+- Smooth Navigation
+
+## Technologies Used
+- HTML5
+- CSS3
+- JavaScript
+
+## Author
+Khizra Khan
