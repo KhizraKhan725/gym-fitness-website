@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>khizra Fitness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Reset & Base Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        body {
+            /* Your provided background image aligned to look like the layout */
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('https://tse4.mm.bing.net/th/id/OIP.XvQrhP4LaOEDWxjT01cSEwHaE7?pid=Api&h=220&P=0');
+            background-size: cover;
+            background-position: center right;
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        /* --- Header Styling --- */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 50px;
+        }
+
+        /* Left Side: Logo */
+        .left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .left img {
+            width: 35px;
+            filter: invert(1); /* Makes the dumbbell icon bright white */
+            margin-bottom: 5px;
+        }
+
+        .left .logo-text {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* Mid Side: Navigation Links */
+        .mid .navbar {
+            list-style: none;
+            display: flex;
+        }
+
+        .mid .navbar li {
+            margin: 0 18px;
+        }
+
+        .mid .navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 700;
+            font-size: 15px;
+            transition: color 0.2s ease;
+        }
+
+        .mid .navbar a:hover,
+        .mid .navbar a.active {
+            color: #aaa;
+            text-decoration: underline;
+        }
+
+        /* Right Side: Header Buttons */
+        .right {
+            display: flex;
+            gap: 12px;
+        }
+
+        .right .btn {
+            background: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 6px 15px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .right .btn:hover {
+            background: #fff;
+            color: #000;
+        }
+
+
+        /* --- Main Content Layout --- */
+        .container {
+            padding: 40px 60px;
+            height: calc(100vh - 100px);
+            display: flex;
+            align-items: center;
+        }
+
+        /* Registration Form Box */
+        .form-box {
+            border: 1px solid #777;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(2px);
+            width: 440px;
+            padding: 45px 35px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .form-box h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            text-align: center;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .form-group input::placeholder {
+            color: #777;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 10px;
+            background: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: #fff;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="left">
+            <img src="https://cdn-icons-png.flaticon.com/512/96/96347.png" alt="Gym Icon">
+            <div class="logo-text">khizra fitness</div>
+        </div>
+
+        <nav class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="right">
+            <button class="btn">Call Us Now</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="form-box">
+            <h2>Join the best gym of fsd now</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter your Age" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter your Gender" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter your Locality" required>
+                </div>
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

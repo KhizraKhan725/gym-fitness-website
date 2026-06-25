@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Pulse Gym & Fitness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Reset & Base Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            /* Using your newly provided background image with a sleek dark overlay */
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), 
+                        url('https://tse4.mm.bing.net/th/id/OIP.XvQrhP4LaOEDWxjT01cSEwHaE7?pid=Api&h=220&P=0');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* --- Header & Navigation Bar --- */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 7%;
+            background-color: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #ff3e3e;
+        }
+
+        /* Left Section: Logo */
+        .left .logo {
+            font-size: 28px;
+            font-weight: 900;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .left .logo span {
+            color: #ff3e3e; /* Gym Red Theme Accent */
+        }
+
+        /* Mid Section: Navbar Links */
+        .mid .navbar {
+            list-style: none;
+            display: flex;
+        }
+
+        .mid .navbar li {
+            margin: 0 20px;
+        }
+
+        .mid .navbar a {
+            text-decoration: none;
+            color: #e0e0e0;
+            font-weight: 700;
+            font-size: 15px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .mid .navbar a:hover, 
+        .mid .navbar a.active {
+            color: #ff3e3e;
+        }
+
+        /* Right Section: Call to Action Button */
+        .right .btn-join {
+            background: #ff3e3e;
+            color: #fff;
+            padding: 10px 25px;
+            border: 2px solid transparent;
+            border-radius: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .right .btn-join:hover {
+            background: transparent;
+            border-color: #ff3e3e;
+            color: #ff3e3e;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: calc(95vh - 80px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0 7%;
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            color: #ff3e3e;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 35px;
+            color: #cccccc;
+        }
+
+        .hero .btn-cta {
+            background: #ff3e3e;
+            color: #fff;
+            border: 2px solid #ff3e3e;
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .hero .btn-cta:hover {
+            background: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+
+        /* --- Gym Features Section --- */
+        .features-section {
+            background: #0a0a0a;
+            padding: 80px 7%;
+            text-align: center;
+        }
+
+        .features-section h2 {
+            font-size: 38px;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+            font-weight: 900;
+        }
+
+        .features-section h2 span {
+            color: #ff3e3e;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #141414;
+            padding: 45px 25px;
+            border-radius: 8px;
+            border: 1px solid #222;
+            border-bottom: 4px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-bottom-color: #ff3e3e;
+            background: #1c1c1c;
+            box-shadow: 0 10px 20px rgba(255, 62, 62, 0.1);
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .card p {
+            color: #aaa;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #000;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+            color: #555;
+            border-top: 1px solid #111;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="left">
+            <div class="logo">Iron<span>Pulse</span></div>
+        </div>
+
+        <nav class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Classes</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="right">
+            <button class="btn-join">Join Now</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>No Pain<br>No <span>Gain</span></h1>
+        <p>Unlock your true potential. Our premium facility, expert coaches, and high-intensity atmosphere are engineered to push your boundaries and reshape your reality.</p>
